@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Positive Number Converter</title>
+</head>
+<body>
+  <!-- HTMl Field -->
+  <form>
+    <label>Enter Even number:</label>
+    <input type="number" id="input">
+    <button onclick="showNextEven()">Submit</button>
+    <p id="result"></p>
+  </form>
+  
+<!-- JS Field -->
+  <script>
+    function showNextEven() {
+      let num = parseInt(document.getElementById("input").value);
+      let resultEl = document.getElementById("result");
+      if (num % 2 === 0) 
+      {
+        let even1 = num + 2;
+        let even2 = num + 4;
+        let even3 = num + 6;
+        resultEl.textContent = alert(` ${even1}, ${even2}, and ${even3}`);
+      }
+       else 
+       {
+        resultEl.textContent = alert("Please enter an even number.");
+      }
+    }
+  </script>
+</body>
+</html>
